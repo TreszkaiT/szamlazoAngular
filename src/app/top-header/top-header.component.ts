@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConfigService } from '../sercice/config.service';
 
 @Component({
   selector: 'app-top-header',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopHeaderComponent implements OnInit {
 
-  constructor() { }
+  appTitle: string = ""
+
+  constructor(private config: ConfigService) { 
+    this.appTitle = this.config.get('appTitle') as string
+  }
 
   ngOnInit(): void {
   }
