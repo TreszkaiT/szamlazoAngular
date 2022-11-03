@@ -42,4 +42,8 @@ export class CurrencyComponent implements OnInit, OnDestroy {
     this.urlService.jumpTo('/currency-edit')
   }
 
+  onDeleteCurrency(currency: Currency){
+    this.currencyService.deleteCurrency(currency)
+  }
+
 }
