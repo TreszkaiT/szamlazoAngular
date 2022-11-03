@@ -16,11 +16,14 @@ import { CurrencyService } from './service/currency.service';
 import { HttpService } from './service/http.service';
 import { ConfigService } from './service/config.service';
 import { CurrencyNewComponent } from './currency/currency-new/currency-new.component';
+import { CurrencyEditComponent } from './currency/currency-edit/currency-edit.component';
+import { UrlService } from './service/url.service';
 
 const roterSettings: Routes = [
   { path: '', component: ContentComponent},
   { path: "currency", component: CurrencyComponent},
   { path: "currency-new", component: CurrencyNewComponent},
+  { path: "currency-edit", component: CurrencyEditComponent},
   { path: '**', component: PageNotFoundComponent}
 ]
 
@@ -32,7 +35,8 @@ const roterSettings: Routes = [
     TopHeaderComponent,
     PageNotFoundComponent,
     CurrencyComponent,
-    CurrencyNewComponent
+    CurrencyNewComponent,
+    CurrencyEditComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +49,8 @@ const roterSettings: Routes = [
   providers: [
     CurrencyService,
     HttpService,
-    ConfigService
+    ConfigService,
+    UrlService
   ],
   bootstrap: [AppComponent]
 })

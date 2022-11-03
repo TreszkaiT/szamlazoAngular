@@ -1,6 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Currency } from '../model/currency';
 import { CurrencyService } from '../service/currency.service';
+import { faEdit, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { UrlService } from '../service/url.service';
 
 @Component({
   selector: 'app-currency',
@@ -13,7 +15,10 @@ export class CurrencyComponent implements OnInit, OnDestroy {
 
   currencySubscribe: any
 
-  constructor(private currencyService: CurrencyService) { 
+  faEdit = faEdit
+  faTimes = faTimes
+
+  constructor(private currencyService: CurrencyService, private urlService: UrlService) { 
 
   }
 
@@ -30,6 +35,11 @@ export class CurrencyComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.currencySubscribe.unsubscribe()
+  }
+
+  onEditCurrency(currency: Currency){
+    this.currencyService.lastEditedCurrency = currency
+    this.urlService.jumpTo('/currency-edit')
   }
 
 }
