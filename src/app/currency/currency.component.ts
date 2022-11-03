@@ -14,6 +14,11 @@ export class CurrencyComponent implements OnInit, OnDestroy {
   currencySubscribe: any
 
   constructor(private currencyService: CurrencyService) { 
+
+  }
+
+  ngOnInit(): void {
+
     this.currencies = this.currencyService.currencies
 
     this.currencySubscribe = this.currencyService.currencyObserve
@@ -21,9 +26,6 @@ export class CurrencyComponent implements OnInit, OnDestroy {
         (currencies) => { this.currencies = currencies},
         (error) => { this.currencies = [] }
       )
-  }
-
-  ngOnInit(): void {
   }
 
   ngOnDestroy(): void {
