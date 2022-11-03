@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { ConfigService } from './sercice/config.service';
+import { ConfigService } from './service/config.service';
 
 @Component({
   selector: 'app-root',

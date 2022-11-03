@@ -1,1 +1,27 @@
-<p>currency works!</p>
+<div class="div container">
+    <div class="div row">
+        <div class="div col-xs-12">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Short Name</th>
+                            <th>Long Name</th>
+                            <th>Buttons</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let currency of currencies">
+                            <td> {{ currency.id }}</td>
+                            <td> {{ currency.nameShort }}</td>
+                            <td> {{ currency.nameLong }}</td>
+                            <td> </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

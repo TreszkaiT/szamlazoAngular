@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 interface Data {
   [key: string]: string | number | boolean
   appTitle: string
+  api: string
+  apiUrl: string
 }
 
 @Injectable({
@@ -11,7 +13,9 @@ interface Data {
 export class ConfigService {
 
   data: Data = {
-    appTitle: 'Számlázó program'
+    appTitle: 'Számlázó program',
+    api: 'api',
+    apiUrl: 'http://localhost:3333'
   }
 
   constructor() { }
