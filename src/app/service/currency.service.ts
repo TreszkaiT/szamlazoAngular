@@ -17,7 +17,7 @@ export class CurrencyService {
   currencyUrl: string = ''
 
   constructor(private http: HttpClient, private httpService: HttpService, private config: ConfigService) { 
-    this.currencyUrl = this.config.get('apiUrl') as string
+    this.currencyUrl = this.config.get('apiUrl') + "/currency"                            // ez itt a server mappán belül lévő /currency.json fájl neve/helye !!!!!!!!!!
     this.getCurrencyWithObserver()                                                        // már betöltéskor értesüljenek más Components-ek a változásról
   }
 

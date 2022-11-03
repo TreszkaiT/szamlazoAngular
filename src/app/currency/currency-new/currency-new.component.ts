@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CurrencyService } from '../../service/currency.service';
 
 @Component({
   selector: 'app-currency-new',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CurrencyNewComponent implements OnInit {
 
-  constructor() { }
+  constructor(private currencyService: CurrencyService) { }
 
   ngOnInit(): void {
+  }
+
+  onClickSubmit(form: any){
+    this.currencyService.addCurrency(form.value)
+      .then(
+        (message) => { console.info(message) }
+      )
   }
 
 }
