@@ -16,7 +16,7 @@ export class PartnerService {
 
   partnerUrl: string = ''
 
-  lastEditedpartner = <Partner>{}
+  lastEditedPartner = <Partner>{}
 
   constructor(private http: HttpClient, private httpService: HttpService, private config: ConfigService) {
     this.partnerUrl = this.config.get('apiUrl') + "/partner"                            // ez itt a server mappán belül lévő /partner.json fájl neve/helye !!!!!!!!!!
@@ -47,7 +47,7 @@ jsonToPartner(partnerArray: any): Partner[] {
   return partners1
 }
 
-addpartner(partner: Partner){
+addPartner(partner: Partner){
   return new Promise( (resolve, reject) => {
     this.httpService.create(`${this.partnerUrl}`, partner)
       .then(
@@ -59,7 +59,7 @@ addpartner(partner: Partner){
   })
 }
 
-updatepartner(partner: Partner){
+updatePartner(partner: Partner){
   return new Promise( (resolve, reject) => {
     this.httpService.update(`${this.partnerUrl}/${partner.id}`, partner)
       .then(
@@ -71,7 +71,7 @@ updatepartner(partner: Partner){
   })
 }
 
-deletepartner(partner: Partner){
+deletePartner(partner: Partner){
   return new Promise( (resolve, reject) => {
     this.httpService.delete(`${this.partnerUrl}/${partner.id}`)
       .then(
@@ -83,7 +83,7 @@ deletepartner(partner: Partner){
   })
 }
 
-readpartnerOne(one: boolean, id?: string){
+readPartnerOne(one: boolean, id?: string){
   let urls: string = ""
   if(one) urls = this.partnerUrl + "/" + id
   else urls = this.partnerUrl + "/all"
@@ -99,8 +99,8 @@ readpartnerOne(one: boolean, id?: string){
   })
 }
 
-getLastEditedpartner(){
-  return this.lastEditedpartner
+getLastEditedPartner(){
+  return this.lastEditedPartner
 }
 
 }

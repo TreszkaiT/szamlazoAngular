@@ -16,7 +16,7 @@ export class CurrencyEditComponent implements OnInit {
 
   editedCurrency = <Currency>{}
 
-  currentLink: string = "/"
+  // currentLink: string = "/"
 
   constructor(private currencyService: CurrencyService, private urlService: UrlService) { 
     this.lastEditedCurrency = this.currencyService.getLastEditedCurrency()
