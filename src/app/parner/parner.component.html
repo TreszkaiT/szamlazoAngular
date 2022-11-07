@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>Partner listázása és szerkesztése</h2>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>LastName</th>
+                            <th>First Name</th>
+                            <th>Country</th>
+                            <th>Zip</th>
+                            <th>Assress</th>
+                            <th>Buttons</th>
+                        </tr>
+                    </thead>
+                    <tbody>                        
+                        <tr *ngFor="let partner of partners">
+                            <td> {{ partner.id }}</td>
+                            <td> {{ partner.lastName }}</td>
+                            <td> {{ partner.firstName }}</td>
+                            <td> {{ partner.country }} </td>
+                            <td> {{ partner.zip }} </td>
+                            <td> {{ partner.city }}  {{ partner.district }}  {{ partner.houseNumber }}  {{ partner.houseBuilding }} {{ partner.houseFloor }} {{ partner.houseDoor }}</td>                            
+                            <td>
+                                <!-- <div class="btn-group btn-group-sm">
+                                    <button (click)="onEditPartner(partner)" type="button" class="btn btn-primary">
+                                        <fa-icon [icon]="faEdit"></fa-icon>
+                                    </button>
+                                    <button (click)="onDeletePartner(partner)" type="button" class="btn btn-danger">
+                                        <fa-icon [icon]="faTimes"></fa-icon>
+                                    </button>
+                                </div> -->
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

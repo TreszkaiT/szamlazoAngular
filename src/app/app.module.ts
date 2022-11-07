@@ -18,12 +18,19 @@ import { ConfigService } from './service/config.service';
 import { CurrencyNewComponent } from './currency/currency-new/currency-new.component';
 import { CurrencyEditComponent } from './currency/currency-edit/currency-edit.component';
 import { UrlService } from './service/url.service';
+import { ParnerComponent } from './parner/parner.component';
+import { PartnerNewComponent } from './parner/partner-new/partner-new.component';
+import { PartnerEditComponent } from './parner/partner-edit/partner-edit.component';
+import { PartnerService } from './service/partner.service';
 
 const roterSettings: Routes = [
   { path: '', component: ContentComponent},
   { path: "currency", component: CurrencyComponent},
   { path: "currency-new", component: CurrencyNewComponent},
   { path: "currency-edit", component: CurrencyEditComponent},
+  { path: "partner", component: ParnerComponent},
+  { path: "partner-new", component: PartnerNewComponent},
+  { path: "partner-edit", component: PartnerEditComponent},
   { path: '**', component: PageNotFoundComponent}
 ]
 
@@ -36,7 +43,10 @@ const roterSettings: Routes = [
     PageNotFoundComponent,
     CurrencyComponent,
     CurrencyNewComponent,
-    CurrencyEditComponent
+    CurrencyEditComponent,
+    ParnerComponent,
+    PartnerNewComponent,
+    PartnerEditComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +60,8 @@ const roterSettings: Routes = [
     CurrencyService,
     HttpService,
     ConfigService,
-    UrlService
+    UrlService,
+    PartnerService
   ],
   bootstrap: [AppComponent]
 })

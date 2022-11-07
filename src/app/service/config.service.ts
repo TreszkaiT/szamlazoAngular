@@ -15,7 +15,8 @@ export class ConfigService {
   data: Data = {
     appTitle: 'Számlázó program',
     api: 'api',
-    apiUrl: 'http://localhost:3333'
+    apiUrl: 'http://localhost:8080'
+    // apiUrl: 'http://localhost:3333'
   }
 
   constructor() { }
