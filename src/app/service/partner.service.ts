@@ -40,9 +40,9 @@ jsonToPartner(partnerArray: any): Partner[] {
   let partners1: Array<Partner> = []
   
   for(let partner of partnerArray){
-    let newpartner = new partner()
-    newpartner.fromObject(partner)
-    partners1.push(newpartner)
+    let newPartner = new Partner()
+    newPartner.fromObject(partner)
+    partners1.push(newPartner)
   }    
   return partners1
 }
