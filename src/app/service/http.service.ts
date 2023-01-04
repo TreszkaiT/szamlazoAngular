@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -21,7 +21,10 @@ export class HttpService {
       }
 
       if (type === 'put' || type === 'post') {
-        this.http[type](url, data)
+        let headers = new HttpHeaders();
+        headers = headers.set('Content-Type', 'application/json; charset=utf-8');               // headers hogy ne text/plain-be küldje a szerver felé, mert úgy nem fogadja el. Hanem json-ban
+
+        this.http[type](url, data, {headers: headers})                                          // és még ide is beírni: {headers: headers}
           .forEach(
             (response) => { resolve(response) }
           )
@@ -38,7 +41,7 @@ export class HttpService {
   create(url: string, data: any) {
     return this.baseRequest(url, 'put', data)
   }
-  
+
   read(url: string) {
     return this.baseRequest(url, 'get')
   }

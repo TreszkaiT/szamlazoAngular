@@ -1,1 +1,121 @@
-<p>partner-new works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>Partner felvétele</h2>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <form #form="ngForm" (submit)="onClickSubmit(form)" novalidate>
+                <div class="form-group">
+                    <label>Last Name</label>
+                    <input type="text" name="lastName" class="form-control" required ngModel>
+                </div>
+                <div class="form-group">
+                    <label>First Name</label>
+                    <input type="text" name="firstName" class="form-control" required ngModel>
+                </div>
+                <div class="form-group">
+                    <label>Country</label>
+                    <input type="text" name="country" class="form-control" required ngModel>
+                </div>
+                <div class="form-group">
+                    <label>Zip</label>
+                    <input type="text" name="zip" class="form-control" required ngModel>
+                </div>
+                <div class="form-group">
+                    <label>City</label>
+                    <input type="text" name="city" class="form-control" required ngModel>
+                </div>
+                <div class="form-group">
+                    <label>District</label>
+                    <input type="text" name="district" class="form-control" required ngModel>
+                </div>
+                <div class="form-group">
+                    <label>House Number</label>
+                    <input type="text" name="houseNumber" class="form-control" required ngModel>
+                </div>
+                <div class="form-group">
+                    <label>House Building</label>
+                    <input type="text" name="houseBuilding" class="form-control" required ngModel>
+                </div>
+                <div class="form-group">
+                    <label>House Staircase</label>
+                    <input type="text" name="houseStaircase" class="form-control" required ngModel>
+                </div>
+                <div class="form-group">
+                    <label>House Floor</label>
+                    <input type="text" name="houseFloor" class="form-control" required ngModel>
+                </div>
+                <div class="form-group">
+                    <label>House Door</label>
+                    <input type="text" name="houseDoor" class="form-control" required ngModel>
+                </div>
+                <div class="form-group">
+                    <label>Bank Acc Num1</label>
+                    <input type="text" name="bankAccNum1" class="form-control" required ngModel>
+                </div>
+                <div class="form-group">
+                    <label>Bank Acc Num2</label>
+                    <input type="text" name="bankAccNum2" class="form-control" required ngModel>
+                </div>
+                <div class="form-group">
+                    <label>Bank Acc Num3</label>
+                    <input type="text" name="bankAccNum3" class="form-control" required ngModel>
+                </div>
+                <div class="form-group">
+                    <label>Tax Num1</label>
+                    <input type="text" name="taxNum1" class="form-control" required ngModel>
+                </div>
+                <div class="form-group">
+                    <label>Tax Num2</label>
+                    <input type="text" name="taxNum2" class="form-control" required ngModel>
+                </div>
+                <div class="form-group">
+                    <label>Tax Num3</label>
+                    <input type="text" name="taxNum3" class="form-control" required ngModel>
+                </div>
+                <div class="form-group">
+                    <label>Contact1 Name</label>
+                    <input type="text" name="contact1Name" class="form-control" required ngModel>
+                </div>
+                <div class="form-group">
+                    <label>Contact1 Tel1</label>
+                    <input type="text" name="contact1Tel1" class="form-control" required ngModel>
+                </div>
+                <div class="form-group">
+                    <label>Contact1 Tel2</label>
+                    <input type="text" name="contact1Tel2" class="form-control" required ngModel>
+                </div>
+                <div class="form-group">
+                    <label>Contact1 Email</label>
+                    <input type="text" name="contact1Email" class="form-control" required ngModel>
+                </div>
+                <div class="form-group">
+                    <label>Contact2 Name</label>
+                    <input type="text" name="contact2Name" class="form-control" required ngModel>
+                </div>
+                <div class="form-group">
+                    <label>Contact2 Tel1</label>
+                    <input type="text" name="contact2Tel1" class="form-control" required ngModel>
+                </div>
+                <div class="form-group">
+                    <label>Contact2 Tel2</label>
+                    <input type="text" name="contact2Tel2" class="form-control" required ngModel>
+                </div>
+                <div class="form-group">
+                    <label>Contact2 Email</label>
+                    <input type="text" name="contact2Email" class="form-control" required ngModel>
+                </div>
+
+                    <input type="hidden" name="id" placeholder="1" value="1" ngModel>
+
+                <button type="submit" [disabled]="!form.valid" class="btn btn-primary">Add</button>
+            </form>
+        </div>
+    </div>
+</div>
+
