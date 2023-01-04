@@ -28,7 +28,7 @@ export class CurrencyService {
       .subscribe(
         (response) => {
           this.currencies = this.jsonToCurrency(response)
-          this.currencyObserve.next(this.currencies)                                      // Component értesítése/frissítése itt történik
+          this.currencyObserve.next(this.currencies)                                      // Component értesítése/frissítése itt történik 
         },
         (error) => {
           this.currencyObserve.error("Error in Observe")

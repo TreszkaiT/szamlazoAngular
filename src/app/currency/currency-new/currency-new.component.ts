@@ -13,11 +13,12 @@ export class CurrencyNewComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onClickSubmit(form: any){
+  onClickSubmit(form: any){    
     this.currencyService.addCurrency(form.value)
       .then(
         (message) => { console.info(message) }
       )
+      console.log(form.value)
   }
 
 }
