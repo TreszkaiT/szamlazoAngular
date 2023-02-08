@@ -22,6 +22,9 @@ import { ParnerComponent } from './parner/parner.component';
 import { PartnerNewComponent } from './parner/partner-new/partner-new.component';
 import { PartnerEditComponent } from './parner/partner-edit/partner-edit.component';
 import { PartnerService } from './service/partner.service';
+import { SzamlaComponent } from './szamla/szamla.component';
+import { SzamlaEditComponent } from './szamla/szamla-edit/szamla-edit.component';
+import { SzamlaNewComponent } from './szamla/szamla-new/szamla-new.component';
 
 const roterSettings: Routes = [
   { path: '', component: ContentComponent},
@@ -31,6 +34,9 @@ const roterSettings: Routes = [
   { path: "partner", component: ParnerComponent},
   { path: "partner-new", component: PartnerNewComponent},
   { path: "partner-edit", component: PartnerEditComponent},
+  { path: "szamla", component: SzamlaComponent},
+  { path: "szamla-new", component: SzamlaNewComponent},
+  { path: "szamla-edit", component: SzamlaEditComponent},
   { path: '**', component: PageNotFoundComponent}
 ]
 
@@ -46,7 +52,10 @@ const roterSettings: Routes = [
     CurrencyEditComponent,
     ParnerComponent,
     PartnerNewComponent,
-    PartnerEditComponent
+    PartnerEditComponent,
+    SzamlaComponent,
+    SzamlaEditComponent,
+    SzamlaNewComponent
   ],
   imports: [
     BrowserModule,

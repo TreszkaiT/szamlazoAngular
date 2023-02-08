@@ -1,0 +1,69 @@
+<div class="div">
+    <div class="row">
+        <div class="div col-xs-12">
+            <div class="h2">Számlaadatok bevitele</div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Számla típusa</th>
+                            <th>Bizonylat száma</th>
+                            <th>Egyedi bizonylatszám</th>
+                            <th>Pénznem</th>
+                            <th>Partner név</th>
+                            <th>Fizetési mód</th>
+                            <th>Számla kelte</th>
+                            <th>Teljesítés</th>
+                            <th>Fizetési határidő</th>
+                            <th>Számla bruttó összege</th>
+                            <th>Kiegyenlített</th>
+                            <th>Munkaszám</th>
+                            <th>Megjegyzés</th>
+                            <th>Csatolmány</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let szamla of szamlas">
+                            <td> {{ szamla.id }}</td>
+                            <td> {{ szamla.billType }}</td>
+                            <td> {{ szamla.receiptNumber }}</td>
+                            <td> {{ szamla.receiptNumberUnique }} </td>
+                            <td> {{ szamla.currency }} </td>
+                            <td> {{ szamla.partnerName }} </td>
+                            <td> {{ szamla.paymentMode }} </td>
+                            <td> {{ szamla.billDate }} </td>
+                            <td> {{ szamla.completionDate }} </td>
+                            <td> {{ szamla.paymentEnd }} </td>
+                            <td> {{ szamla.gorssAmount }} </td>
+                            <td> {{ szamla.balanced }} </td>
+                            <td> {{ szamla.workNumber1 }} </td>
+                            <td> {{ szamla.workNumber2 }} </td>
+                            <td> {{ szamla.workNumber3 }} </td>
+                            <td> {{ szamla.workNumber4 }} </td>
+                            <td> {{ szamla.workNumber5 }} </td>
+                            <td> {{ szamla.comment }} </td>
+                            <td> {{ szamla.attachment }} </td>
+                            <td>
+                                <div class="btn-group btn-group-sm">
+                                    <button (click)="onEditSzamla(szamla)" type="button" class="btn btn-primary">
+                                        <fa-icon [icon]="faEdit"></fa-icon>
+                                    </button>
+                                    <button (click)="onDeleteSzamla(szamla)" type="button" class="btn btn-danger">
+                                        <fa-icon [icon]="faTimes"></fa-icon>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

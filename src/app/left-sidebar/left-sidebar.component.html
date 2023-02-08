@@ -15,6 +15,11 @@
         <!-- <li><a href="">Új Számla</a></li>  -->
     </ul>
     <ul class="nav nav-sidebar">
+        <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a [routerLink]="['/szamla']">Számlák</a></li>
+        <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a [routerLink]="['/szamla-new']">Új Számla</a></li>
+        <!-- <li><a href="">Új Számla</a></li>  -->
+    </ul>    
+    <ul class="nav nav-sidebar">
         <!-- <li><a href="">Nav item again</a></li>
         <li><a href="">One more nav</a></li>
         <li><a href="">Another nav item</a></li> -->

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PartnerService } from 'src/app/service/partner.service';
+import { PartnerService } from '../../service/partner.service';
 
 @Component({
   selector: 'app-partner-new',
